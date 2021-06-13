@@ -1,7 +1,6 @@
 .container {
     text-align: center;
     width: 400px;
-    margin: 20px auto;
     -webkit-perspective: 1200;
     perspective: 1200;
     -webkit-transform-style: preserve-3d;
@@ -43,7 +42,6 @@
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .back {
@@ -53,7 +51,7 @@
     transform: rotateY(-180deg);
 }
 
-.flipper {
+.flip {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);

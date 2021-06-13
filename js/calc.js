@@ -1,3 +1,9 @@
+let todo_btn = document.querySelector('.calculator__todo-btn');
+todo_btn.addEventListener('click', () => {
+    let flipper = document.querySelector('.flipper');
+    flipper.classList.remove('flip');
+});
+
 let btns = document.querySelectorAll('.calculator__btn');
 
 btns.forEach(btn => {
