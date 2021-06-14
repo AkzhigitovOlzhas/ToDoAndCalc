@@ -1,6 +1,8 @@
 let calcBtn = document.querySelector('.todo__calc-btn');
 
 calcBtn.addEventListener('click', () => {
+    let audio = new Audio('../sound/perexod.mp3');
+    audio.play();
     let flipper = document.querySelector('.flipper');
     flipper.classList.add('flip');
 });
@@ -10,6 +12,8 @@ let addTaskBtn = document.querySelector('.todo__add-btn');
 
 
 addTaskBtn.addEventListener('click', () => {
+    let audio = new Audio('../sound/click2.mp3');
+    audio.play();
     let todoAddText = document.getElementById('todo_add_text');
 
     if (todoAddText.value == '') {
@@ -85,6 +89,9 @@ function doneTask(event) {
     task.classList.add('done');
     editBtn.classList.add('disable');
     editBtn.removeEventListener('click', editTask);
+
+    let audio = new Audio('../sound/click.mp3');
+    audio.play();
 }
 
 function cancelDoneTask(event) {
@@ -105,6 +112,9 @@ function cancelDoneTask(event) {
 
     editBtn.classList.remove('disable');
     editBtn.addEventListener('click', editTask);
+
+    let audio = new Audio('../sound/click.mp3');
+    audio.play();
 }
 
 function editTask(event) {
@@ -127,6 +137,9 @@ function editTask(event) {
     deleteBtn.removeEventListener("click", deleteTask);
 
     taskText.setAttribute('contenteditable', true);
+
+    let audio = new Audio('../sound/click.mp3');
+    audio.play();
 }
 
 function saveTask(event) {
@@ -149,11 +162,17 @@ function saveTask(event) {
     deleteBtn.addEventListener("click", deleteTask);
 
     taskText.removeAttribute('contenteditable');
+
+    let audio = new Audio('../sound/click.mp3');
+    audio.play();
 }
 
 function deleteTask(event) {
     let task = event.path[3];
     task.remove();
+
+    let audio = new Audio('../sound/click.mp3');
+    audio.play();
 }
 
 function getCurrentTime() {
